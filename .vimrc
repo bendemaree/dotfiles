@@ -13,6 +13,9 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'snipmate-snippets'
 Bundle 'Jinja'
 Bundle 'Haml'
@@ -39,8 +42,7 @@ set autoindent
 set softtabstop=4 shiftwidth=4 expandtab
 
 " visual
-colorscheme vibrantink
-highlight Normal ctermbg=black
+colorscheme solarized
 set background=dark
 set cursorline
 set t_Co=256
@@ -48,7 +50,7 @@ set t_Co=256
 " syntax highlighting
 syntax on
 filetype on
-filetype plugin indent on 
+filetype plugin indent on
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -62,8 +64,13 @@ au Syntax * RainbowParenthesesLoadBraces
 " lycosa
 set hidden
 
+" powerline
+set laststatus=2
+set encoding=utf-8
+let Powerline_symbols="fancy"
+
 " leader
-let mapleader = "," 
+let mapleader = ","
 
 " sudo
-cmap w!! w !sudo tee % >/dev/null 
+cmap w!! w !sudo tee % >/dev/null

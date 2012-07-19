@@ -5,13 +5,15 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="vibrantink"
+ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim='/Users/.demar136.xahome/Applications/vim' 
 alias tmux='tmux -f /Users/.demar136.xahome/.tmux'
+alias ll='gls -a --color=auto --group-directories-first'
+alias l='gls -la --color=auto --group-directories-first'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -44,5 +46,8 @@ export PATH=$PATH:/Users/Shared/Benjamin/Applications/homebrew/sbin
 export PATH=$PATH:/Users/.demar136.xahome/Applications
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/Projects
-#export VIRTUALENVWRAPPER_VIRTUALENV="/Users/.demar136.xahome/Library/Python/2.7/bin/virtualenv"
+export VIRTUALENVWRAPPER_VIRTUALENV="/Users/.demar136.xahome/Library/Python/2.7/bin/virtualenv"
 source /Users/.demar136.xahome/Library/Python/2.7/bin/virtualenvwrapper.sh 
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
+share="/Users/Shared/Benjamin"
+eval `gdircolors ~/.dircolors`
