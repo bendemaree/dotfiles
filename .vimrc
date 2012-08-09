@@ -1,7 +1,7 @@
 " global
 set nocompatible               " be iMproved
 filetype off                   " required!
-set rtp+=/Users/Shared/Benjamin/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
